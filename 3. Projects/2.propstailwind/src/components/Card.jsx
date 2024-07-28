@@ -2,6 +2,7 @@ import React from "react";
 
 function Card(props) {
   // Props is an Object, if we want different properties for Similar type of component like Card etc, we can use Props.
+  // We can directly destructure the props Object here in the parameters.
   console.log(props);
   return (
     <>

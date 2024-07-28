@@ -1,6 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 
+// useCallback Hook-- Accepts a function and dependencies array. It stores some part of the function and dependencies values in the cache for Optimization
+
+// useEffect Hook -- accepts fn. and dependencies. It executes the fn if any of the dependencies Changes and also on Page Load or reload.
+
+// useRef Hook - It is used to refer to a particular element.
 function App() {
   const [value, setValue] = useState(10);
   const [numberAllowed, setNumberAllowed] = useState(false);
