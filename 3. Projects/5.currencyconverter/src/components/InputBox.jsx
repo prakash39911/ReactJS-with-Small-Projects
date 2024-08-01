@@ -44,4 +44,6 @@ function InputBox({
   );
 }
 
+// Key used as an attribute while using loops. Key shoud be Unique to improve the performance. e.g database _id.
+
 export { InputBox };

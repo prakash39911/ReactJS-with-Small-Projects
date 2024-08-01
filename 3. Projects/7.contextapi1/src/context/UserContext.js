@@ -1,6 +1,6 @@
 import React from "react";
 
-// Why do we need Context api in the first place--- if we have created an application with nested components, and we want to pass data to the innermost component, then we have to pass that data from top to bottom at each stage. This is not at all optimized way. That is why we need something that can pass data directly to thatinnermost component directly.
+// Why do we need Context api in the first place--- if we have created an application with nested components, and we want to pass data,  that is defined in the App.jsx, to the innermost component, then we have to pass that data from top to bottom at each stage as prop. This is not at all optimized way. That is why we need something that can pass data directly to that innermost component directly.
 // That is why we are learning Context Api. Basically it is a State management System.
 
 ///////////////////////////////////////////////////////

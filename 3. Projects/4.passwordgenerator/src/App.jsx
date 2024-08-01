@@ -1,7 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 
-// useCallback Hook-- Accepts a function and dependencies array. It stores some part of the function and dependencies values in the cache for Optimization
+// By using useCallback appropriately, we can improve the performance of our React applications by reducing unnecessary renders and ensuring stable function references where needed.
+
+// Functions in JavaScript are objects, and every time a parent component re-renders, new instances of functions are created. If these functions are passed as props to child components, it can cause the child components to re-render unnecessarily. useCallback memoizes the function, ensuring that it is only recreated when one of its dependencies changes.
+
+// When a parent component passes a function as a prop to a child component, the child component may re-render every time the parent re-renders, even if the function reference has not changed in behavior. By memoizing the function with useCallback, the same function reference is passed to the child component unless the dependencies change, thus preventing unnecessary re-renders.
 
 // useEffect Hook -- accepts fn. and dependencies. It executes the fn if any of the dependencies Changes and also on Page Load or reload.
 
