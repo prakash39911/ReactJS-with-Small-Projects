@@ -13,7 +13,7 @@ function TodoForm() {
       return;
     }
 
-    addTodo({ title: todo, completed: false });
+    addTodo({ id: Date.now(), title: todo, completed: false });
     setTodo("");
   };
 
@@ -23,7 +23,7 @@ function TodoForm() {
         type="text"
         placeholder="Write Todo..."
         className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
-        value={todo}
+        value={todo} ///// This is called wiring of input field to the todo state.
         onChange={(e) => setTodo(e.target.value)}
       />
       <button

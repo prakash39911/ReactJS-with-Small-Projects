@@ -8,10 +8,7 @@ function App() {
   const [todos, setTodos] = useState([]); // this is all todos array state.
 
   const addTodo = (todo) => {
-    setTodos((prevTodoArray) => [
-      ...prevTodoArray,
-      { id: Date.now(), ...todo },
-    ]);
+    setTodos((prevTodoArray) => [{ ...todo }, ...prevTodoArray]);
   };
 
   const updateTodo = (id, todo) => {
@@ -37,10 +34,6 @@ function App() {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("localStorageTodo")) {
-      return;
-    }
-
     const isValue = JSON.parse(localStorage.getItem("localStorageTodo"));
 
     if (isValue.length === 0) {
