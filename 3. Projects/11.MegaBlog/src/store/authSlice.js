@@ -2,14 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // we are creating this store to keep track of whether the user is logged in or not (authenticated or not).
 
-const initialstate = {
+const initialState = {
   status: false,
   userData: null,
 };
 
 const authSlice = createSlice({
   name: "auth",
-  initialstate,
+  initialState,
   reducers: {
     login: (state, action) => {
       state.status = true;
